@@ -7,7 +7,7 @@
 body {
   font-family: "Neucha", cursive;
   background-color: burlywood;
-  background-image: url(/imagenes/fondo.jpg);
+  background-image: url(./imagenes/fondo.jpg);
   background-size: cover;
   background-attachment: fixed; }
   body a {

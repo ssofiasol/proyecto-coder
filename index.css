@@ -6,7 +6,7 @@
 body {
   font-family: "Neucha", cursive;
   background-color: burlywood;
-  background-image: url(/imagenes/fondo.jpg);
+  background-image: url(./imagenes/fondo.jpg);
   background-size: cover;
   background-attachment: fixed;
 }
@@ -493,7 +493,7 @@ a {
 .contactos {
   text-align: center;
   margin-top: 30px;
-  background-image: url(/imagenes/p\ cuchara.jpeg);
+  background-image: url(./imagenes/p\ cuchara.jpeg);
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
