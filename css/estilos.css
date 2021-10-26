@@ -1,0 +1,196 @@
+@charset "UTF-8";
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Neucha", cursive;
+  background-color: burlywood;
+  background-image: url(/imagenes/fondo.jpg);
+  background-size: cover;
+  background-attachment: fixed; }
+  body a {
+    color: black;
+    text-decoration: none; }
+    body a:hover {
+      color: black;
+      text-decoration: none; }
+  body img:hover {
+    border: double 1px rgba(255, 255, 255, 0);
+    transition: 0.7s; }
+  body header .iniciarSesión {
+    display: inline-block;
+    width: 97%;
+    position: sticky;
+    text-align: right;
+    font-size: small;
+    font-family: "Neucha", cursive;
+    margin: 30px 0px 10px auto; }
+  body header .nombre {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px 0px 0px 10px; }
+  body header .pottery {
+    font-family: "Satisfy", cursive;
+    margin-left: 53px; }
+  body header .arcoiris {
+    flex: 1;
+    text-align: center; }
+  body header .logosBucadorCarrito {
+    margin-right: 40px; }
+    body header .logosBucadorCarrito img {
+      height: 30px;
+      transition: 2s; }
+      body header .logosBucadorCarrito img:hover {
+        transform: scale(2, 2); }
+  body header nav .navegador {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0px 0px 10px 0px;
+    border: solid;
+    border-width: 0.5px;
+    padding: 8px;
+    background-color: rgba(255, 218, 224, 0.897);
+    list-style-type: none; }
+    body header nav .navegador ul {
+      list-style: none;
+      padding: 20px;
+      font-size: 0;
+      width: 310%;
+      position: absolute;
+      display: none; }
+      body header nav .navegador ul li {
+        display: block; }
+    body header nav .navegador li {
+      display: inline-block;
+      position: relative;
+      font-size: 18px;
+      font-family: "Mali", cursive; }
+      body header nav .navegador li:hover ul {
+        display: block;
+        background-color: rgba(255, 218, 224, 0.616); }
+      body header nav .navegador li a {
+        padding: 8px; }
+        body header nav .navegador li a:hover {
+          font-weight: bold; }
+  body header nav .navLink {
+    text-decoration: none;
+    color: black;
+    font-family: "Mali", cursive;
+    font-weight: normal;
+    font-size: large; }
+  body header .containerDos {
+    display: none; }
+  body main .primerasImágenes {
+    margin: 30px 0px 30px auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    --animate-duration: 1s; }
+    body main .primerasImágenes img {
+      height: 320px; }
+    body main .primerasImágenes video {
+      height: 320px; }
+  body main .envíoTransfTarjetas {
+    border: groove;
+    border-width: 0.5px;
+    padding: 10px;
+    font-weight: bold;
+    font-family: "Neucha", cursive;
+    background-color: rgba(255, 218, 224, 0.897); }
+    body main .envíoTransfTarjetas .envio {
+      display: inline-block;
+      width: 30%;
+      text-align: left;
+      margin: 20px 0px 20px 18px; }
+    body main .envíoTransfTarjetas .transf {
+      display: inline-block;
+      width: 30%;
+      text-align: center;
+      margin: 20px 0px 20px auto; }
+    body main .envíoTransfTarjetas .tarjetas {
+      display: inline-block;
+      width: 36%;
+      text-align: right; }
+  body main .destacadosTítulo {
+    font-size: 25px;
+    background-color: rgba(255, 218, 224, 0.897);
+    margin: 50px 0px 30px 200px;
+    font-family: "Neucha", cursive;
+    padding: 12px;
+    height: 55px; }
+    body main .destacadosTítulo .destac {
+      text-decoration: none; }
+      body main .destacadosTítulo .destac:hover {
+        font-weight: bold; }
+  body main .container {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center; }
+    body main .container .descripciónCarouselInicio {
+      font-size: 20px;
+      font-weight: bold; }
+      body main .container .descripciónCarouselInicio a {
+        color: rgba(0, 0, 0, 0.733);
+        text-decoration: none; }
+        body main .container .descripciónCarouselInicio a:hover {
+          color: black; }
+  body main .novedades {
+    text-align: center;
+    font-style: italic;
+    font-size: larger;
+    margin: 20px;
+    font-family: "Neucha", cursive; }
+  body footer .insta {
+    text-align: center;
+    font-size: larger;
+    background: #020024;
+    background: radial-gradient(circle, #020024 0%, #ffdcf7 0%, rgba(255, 74, 166, 0.479429) 100%);
+    margin: 25px 0px 0px auto;
+    font-family: "Handlee", cursive; }
+  body footer .logoDeInsta {
+    text-align: center; }
+    body footer .logoDeInsta img {
+      height: 45px; }
+  body footer .seguinos {
+    text-align: center;
+    font-size: larger;
+    background: #020024;
+    background: radial-gradient(circle, #020024 0%, #ffdcf7 0%, rgba(255, 74, 166, 0.479429) 100%);
+    margin: 0px 0px 20px auto;
+    font-family: "Handlee", cursive; }
+  body footer .mapa {
+    font-family: "Neucha", cursive;
+    margin: 3px;
+    font-size: large;
+    margin-left: 20px;
+    margin-top: 7px; }
+  body footer .footerList {
+    display: inline-block;
+    width: 50%;
+    margin-left: 10px;
+    list-style-type: none;
+    font-family: "Neucha", cursive;
+    font-size: 16px;
+    font-weight: bold; }
+    body footer .footerList a {
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.692);
+      margin-left: 30px; }
+  body footer .seccFooterInfo {
+    display: inline-block;
+    width: 47%; }
+    body footer .seccFooterInfo .footerInfo {
+      display: flex;
+      flex-direction: column;
+      text-align: end;
+      margin-bottom: 5px;
+      font-family: "Neucha", cursive;
+      font-size: 16px;
+      font-weight: bold; }

@@ -1,0 +1,732 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Neucha", cursive;
+  background-color: burlywood;
+  background-image: url(/imagenes/fondo.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+/*--------------------------- Acá empieza el header del INDEX---------------------------*/
+img:hover {
+  border: double 1px rgba(255, 255, 255, 0);
+  transition: 0.7s;
+}
+.iniciarSesión {
+  display: inline-block;
+  width: 97%;
+  position: sticky;
+  text-align: right;
+  font-size: small;
+  font-family: "Neucha", cursive;
+  margin: 30px 0px 10px auto;
+}
+.nombre {
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0px 0px 0px 10px;
+}
+a:hover {
+  color: black;
+}
+.pottery {
+  font-family: "Satisfy", cursive;
+  margin-left: 53px;
+}
+.arcoiris {
+  flex: 1;
+  text-align: center;
+}
+.logosBucadorCarrito {
+  margin-right: 40px;
+}
+.logosBucadorCarrito img {
+  height: 30px;
+  transition: 2s;
+}
+.logosBucadorCarrito img:hover {
+  transform: scale(2, 2);
+}
+.navegador {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 0px 0px 10px 0px;
+  border: solid;
+  border-width: 0.5px;
+  padding: 8px;
+  background-color: rgba(255, 218, 224, 0.897);
+  list-style-type: none;
+}
+.navegador ul {
+  list-style: none;
+  padding: 20px;
+  font-size: 0;
+  width: 310%;
+  position: absolute;
+  display: none;
+}
+.navegador ul li {
+  display: block;
+}
+.navegador li {
+  display: inline-block;
+  position: relative;
+  font-size: 18px;
+  font-family: "Mali", cursive;
+}
+.navegador li a {
+  padding: 8px;
+}
+.navegador li a:hover {
+  font-weight: bold;
+}
+.navegador li:hover ul {
+  display: block;
+  background-color: rgba(255, 218, 224, 0.616);
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+.navLink {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-family: "Mali", cursive;
+  font-weight: normal;
+  font-size: large;
+}
+.containerDos {
+  display: none;
+}
+/*--------------------------- Acá empieza el MAIN del INDEX---------------------------*/
+.primerasImágenes {
+  margin: 30px 0px 30px auto;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  --animate-duration: 1s;
+}
+.primerasImágenes img {
+  height: 320px;
+}
+.primerasImágenes video {
+  height: 320px;
+}
+.envíoTransfTarjetas {
+  border: groove;
+  border-width: 0.5px;
+  padding: 10px;
+  font-weight: bold;
+  font-family: "Neucha", cursive;
+  background-color: rgba(255, 218, 224, 0.897);
+}
+.envio {
+  display: inline-block;
+  width: 30%;
+  text-align: left;
+  margin: 20px 0px 20px 18px;
+}
+.transf {
+  display: inline-block;
+  width: 30%;
+  text-align: center;
+  margin: 20px 0px 20px auto;
+}
+.tarjetas {
+  display: inline-block;
+  width: 36%;
+  text-align: right;
+}
+.destacadosTítulo {
+  font-size: 25px;
+  background-color: rgba(255, 218, 224, 0.897);
+  margin: 50px 0px 0px 200px;
+  font-family: "Neucha", cursive;
+  padding: 12px;
+  height: 55px;
+}
+.destac {
+  text-decoration: none;
+}
+.destac:hover {
+  font-weight: bold;
+}
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.descripciónCarouselInicio {
+  font-size: 20px;
+  font-weight: bold;
+}
+.descripciónCarouselInicio a{
+  color: rgba(0, 0, 0, 0.733);
+  text-decoration: none;
+}
+.descripciónCarouselInicio a:hover {
+  color: rgb(0, 0, 0);
+}
+.novedades {
+  text-align: center;
+  font-style: italic;
+  font-size: larger;
+  margin: 20px;
+  font-family: "Neucha", cursive;
+}
+
+/*--------------------------- Acá empieza el FOOTER del INDEX---------------------------*/
+.insta {
+  text-align: center;
+  font-size: larger;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,220,247,1) 0%, rgba(255,74,166,0.47942927170868344) 100%);
+  margin: 25px 0px 0px auto;
+  font-family: "Handlee", cursive;
+}
+.logoDeInsta {
+  text-align: center;
+}
+.logoDeInsta img {
+  height: 45px;
+}
+.seguinos {
+  text-align: center;
+  font-size: large;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,220,247,1) 0%, rgba(255,74,166,0.47942927170868344) 100%);
+  margin: 0px 0px 20px auto;
+  font-family: "Handlee", cursive;
+}
+.mapa {
+  font-family: "Neucha", cursive;
+  margin: 3px;
+  font-size: large;
+  margin-left: 20px;
+  margin-top: 7px;
+}
+.footerList {
+  display: inline-block;
+  width: 50%;
+  color: rgba(0, 0, 0, 0.692);
+  margin-left: 10px;
+  list-style-type: none;
+  font-family: "Neucha", cursive;
+  font-size: 15px;
+  font-weight: bold;
+}
+.footerList a {
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.692);
+  margin-left: 30px;
+}
+.seccFooterInfo {
+  display: inline-block;
+  width: 47%;
+}
+.footerInfo {
+  display: flex;
+  flex-direction: column;
+  text-align: end;
+  margin-bottom: 5px;
+  font-family: "Neucha", cursive;
+  font-size: 16px;
+  font-weight: bold;
+}
+/*---------------------------Acá empieza la TIENDA---------------------------*/
+.tienda {
+  font-size: xx-large;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,216,243,1) 0%, rgba(255,251,174,1) 100%);
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+.subtítuloTienda {
+  display: none;
+}
+.tituloFiltros {
+  font-size: x-large;
+  margin-top: 30px;
+  text-align: center;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,216,243,1) 0%, rgba(255,251,174,1) 100%);
+  width: 100%;
+  padding: 2px;
+}
+.tiposDeFiltros {
+  margin: 20px 30px 20px 30px;
+  font-size: large;
+  list-style: none;
+  text-align: center;
+  font-weight: bold;
+  height: 75px;
+}
+.tiposDeFiltros a:hover {
+  font-size: x-large;
+}
+.subtitulo {
+  font-size: x-large;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,216,243,1) 0%, rgba(255,251,174,1) 100%);
+  margin: 50px 0px 0px 200px;
+  padding: 5px;
+}
+.imagenesDeLaTienda {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  --animate-duration: 2s;
+}
+.imagenesDeLaTienda img {
+  margin: 30px 0px 0px 0px;
+  height: 250px;
+}
+.containerTres {
+  display: none;
+}
+.descripYbotonesImg {
+  display: flex;
+  justify-content: center;
+}
+.imagenesDeLosFiltros {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+.imagenesDeLosFiltros img {
+  height: 250px;
+}
+.envíosRetiros {
+  font-size: x-large;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,216,243,1) 0%, rgba(255,251,174,1) 100%);
+  margin: 40px 0px 30px 100px;
+  padding: 10px;
+}
+.tabla {
+  background-color: rgba(205, 233, 47, 0.295);
+  margin: 40px 0px 30px 160px;
+  border-style: solid;
+  border-width: 4px;
+  border-color: rgba(248, 55, 200, 0.616);
+}
+.tabla td, th {
+  padding: 10px 10px 0px 10px; 
+  border: rgba(230, 65, 202, 0.644) 1px solid;
+  text-align: center;
+}
+.tabla td {
+  padding-bottom: 10px;
+}
+.tabla th {
+  background-color: rgba(243, 69, 185, 0.192);
+  font-size: large;
+  padding-bottom: 8px;
+}
+.tabla li {
+  list-style-type: circle;
+  padding: 0px 30px 0px 20px;
+}
+/*---------------------------Acá empieza INSUMOS---------------------------*/
+.Insumos {
+  font-size: xx-large;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,216,243,1) 0%, rgba(255,251,174,1) 100%);
+  width: 100%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+.secInsumos { 
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 20px 20px 30px 40px;
+}
+.fotoCursosEInsumos {
+  width: 300px;
+  border-color: rgba(241, 26, 73, 0.432);
+  border-style: dotted;
+  border-width: 5px;
+  padding: 5px;
+}
+.VideoTaza {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 20px 20px 30px 40px;
+}
+.VideoTaza video {
+  width: 300px;
+  border-color: rgba(241, 26, 73, 0.432);
+  border-style: dotted;
+  border-width: 5px;
+  padding: 5px;
+}
+.textoEsmaltadoYEngobe {
+  display: flex;
+  align-items: center;
+  margin: 0px 30px 20px 30px;
+  text-align: justify;
+  font-size: large;
+  font-weight: bold;
+}
+
+/*---------------------------Acá empieza CURSOS---------------------------*/
+.Cursos {
+  font-size: xx-large;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,216,243,1) 0%, rgba(255,251,174,1) 100%);
+  width: 100%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+.nombreDeCursos {
+  font-size: x-large;
+  margin-top: 30px;
+  text-align: center;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,216,243,1) 0%, rgba(255,251,174,1) 100%);
+  width: 100%;
+  padding: 2px;
+}
+.textoCursosEInsumos {
+  display: flex;
+  align-items: center;
+  margin: 0px 30px 20px 30px;
+  text-align: justify;
+  font-size: large;
+  font-weight: bold;
+}
+.videoBowl video {
+  width: 300px;
+  padding: 5px;
+  border-color: rgba(241, 26, 73, 0.432);
+  border-style: dotted;
+  border-width: 5px;
+}
+/*---------------------------Acá empieza PREG. FRECUENTES---------------------------*/
+.Preguntas {
+  font-size: xx-large;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,216,243,1) 0%, rgba(255,251,174,1) 100%);
+  width: 100%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+.preguntasFrecuentes {
+  background-color: rgba(240, 238, 132, 0.589);
+  margin: 20px 40px 20px 40px;
+  line-height: 30px;
+  text-align: justify;
+  font-family: "Neucha", cursive;
+  padding: 30px;
+}
+.preguntasFrecuentes p {
+  font-size: 1.2em;
+}
+/*---------------------------Acá empieza NOSOTRAS---------------------------*/
+.Nosotras {
+  font-size: xx-large;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,216,243,1) 0%, rgba(255,251,174,1) 100%);
+  width: 100%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+.foto {
+  display: inline-block;
+  position: relative;
+  left: 20px;
+  padding: 10px;
+  border-color: rgba(240, 148, 10, 0.726);
+  border-style: dotted;
+  border-width: 5px;
+  margin: 0px 20px 70px 40px;
+}
+.foto img {
+  height: 300px;
+  transition: 2s;
+}
+.foto img:hover {
+  transform: scale(2,2);
+}
+.textoNosotras {
+  display: inline-block;
+  margin: 30px 30px 20px 30px;
+  text-align: justify;
+  font-size: large;
+  width: 66%;
+  font-weight: bold;
+  text-align: center;
+}
+/*---------------------------Acá empieza CONTACTO---------------------------*/
+.Contacto {
+  font-size: xx-large;
+  background: rgb(2,0,36);
+  background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,216,243,1) 0%, rgba(255,251,174,1) 100%);
+  width: 100%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+.fildset {
+  padding: 60px;
+  font-size: 16px;
+}
+.contactos {
+  text-align: center;
+  margin-top: 30px;
+  background-image: url(/imagenes/p\ cuchara.jpeg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.9;
+}
+.nombreDelContacto {
+  margin: 0px 0px 20px 0px;
+  font-weight: bold;
+}
+.email {
+  margin: 0px 0px 20px 0px;
+  font-weight: bold;
+}
+.motivo {
+  margin: 0px 0px 20px 0px;
+  font-weight: bold;
+}
+.yaCompraste {
+  margin: 0px 0px 20px 0px;
+  font-weight: bold;
+}
+.teLeo {
+  margin: 0px 0px 10px 0px;
+  font-weight: bold;
+}
+.términosCondiciones {
+  margin: 10px 0px 10px 0px;
+  font-weight: bold;
+}
+.enviarDescartar {
+  margin-bottom: 20px;
+}
+
+/*--------------------------- Grids ---------------------------*/
+.grillaNosotras {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: none;
+    grid-template-areas: 
+    "titulo titulo titulo titulo"
+    "foto texto texto texto"
+    "footer footer footer footer";
+}
+.grillaNosotras main {
+    grid-area: titulo;   
+} 
+.grillaNosotras .foto {
+    grid-area: foto;
+}
+.grillaNosotras .textoNosotras {
+    grid-area: texto;
+}
+.grillaNosotras footer {
+    grid-area: footer;
+}
+/*--------------------------- Acá empieza MEDIA QUERIES Dispositivos chicos---------------------------*/
+
+@media (max-width: 697px) {
+  .navBar {
+    background-color: rgba(255, 218, 224, 0.897);
+  }
+  .containerDos {
+    display: flex;
+  }
+  .navbar {
+    flex: 1;
+  }
+  .navbar a {
+    color: black;
+  }
+  .navbar a:hover {
+    font-weight: bold;
+  }
+  ul ul li {
+    display: inline-block;
+    margin-left: 45px;
+  }
+  .iniciarSesión {
+    font-size: 9px;
+  }
+  .nombre {
+    font-size: 25px;
+  }
+  .pottery {
+    font-size: 20px;
+  }
+  .logosBucadorCarrito {
+    margin-right: 10px;
+  }
+  .logosBucadorCarrito img {
+    height: 20px;
+  }
+  .navegador {
+    display: none;
+  }
+  .navegador li {
+    display: block;
+    font-size: 16px;
+    margin: -3px;
+    text-align: center;
+  }
+  .navLink {
+    font-size: medium;
+  }
+  .primerasImágenes img {
+    height: 260px;
+    width: 260px;
+  }
+  .primerasImágenes video {
+    height: 260px;
+    width: 260px;
+  }
+  .envio {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 0px 0px 20px 0px;
+  }
+  .transf {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+  }
+  .tarjetas {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+  .destacadosTítulo {
+    margin: 50px 0px 0px 90px;
+  }
+  .prodDestacados img {
+    height: 230px;
+  }
+  .footerList {
+    width: 40%;
+  }
+  .footerInfo {
+    width: 50%;
+  }
+  .secTiendaDispGrandes {
+    display: none;
+  }
+  .containerTres {
+    display: flex;
+    margin: 20px;
+  }
+  .subtítuloTienda {
+    display: flex;
+    font-size: x-large;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(255,216,243,1) 0%, rgba(255,251,174,1) 100%);
+    margin-top: 30px;
+    padding: 5px;
+    text-align: center;
+  }
+  .subtítuloTienda a{
+    flex:1;
+  }
+  .subtítuloTienda:hover {
+    font-weight: bold;
+  }
+  .tabla {
+    margin: 40px 15px 30px 35px;
+    border-width: 4px;
+  }
+  .tabla td, th {
+    padding: 10px 2px 0px 5px; 
+  }
+  .tabla td {
+    padding-bottom: 5px;
+  }
+  .tabla th {
+    font-size: medium;
+    padding-bottom: 5px;
+  }
+  .tabla li {
+    list-style-type: circle;
+    padding: 0px 30px 0px 10px;
+  }
+  .secInsumos { 
+    flex-wrap: wrap;
+  }
+  .VideoTaza {
+    flex-wrap: wrap;
+}
+}
+
+@media (max-width: 375px) {  
+  .tabla {
+    margin: 20px 5px 30px 15px;
+    border-width: 4px;
+  }
+  .tabla td, th {
+    padding: 10px 2px 0px 2px; 
+  }
+  .tabla td {
+    padding-bottom: 5px;
+  }
+  .tabla th {
+    font-size: medium;
+    padding-bottom: 5px;
+  }
+  .tabla li {
+    list-style-type: none;
+    padding: 0px 20px 0px 0px;
+  }
+}
+/*--------------------------- MEDIA QUERIES Dispositivos medianos---------------------------*/
+@media (min-width: 698px) and (max-width: 1090px) {
+  .iniciarSesión {
+    font-size: 11px;
+  }
+  .nombre {
+    font-size: 27px;
+  }
+  .pottery {
+    font-size: 22px;
+  }
+  .logosBucadorCarrito {
+    margin-right: 10px;
+  }
+  .logosBucadorCarrito img {
+    height: 22px;
+  }   
+  .prodDestacados img {
+    height: 190px;
+  }
+  .primerasImágenes img {
+    height: 240px;
+  }
+  .primerasImágenes video {
+    height: 240px;
+  }
+}
