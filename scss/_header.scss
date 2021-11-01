@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+header {
+    .crearCuenta {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: nowrap;
+    }
+    .iniciarSesión {
+      font-size: 0.875rem;
+      font-family: $fuenteGeneral;
+      margin: 20px 40px 10px 0px;
+      @media (max-width: 697px) {
+        font-size: 12px;
+      }
+    }
+    .nombre {
+      font-family: sans-serif;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 30px 0px 0px 30px;
+      @media (max-width: 697px) {
+        margin: 30px 0px 0px 10px;
+      }
+    }
+    .nombreMarca {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .pottery {
+      font-family: "Satisfy", cursive;
+      margin-left: 53px;
+    }
+    .imagenLogo {
+      flex: 1;
+      text-align: center;
+      height: 140px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+      @media (max-width: 697px) {
+        display: none;
+        height: 110px;
+      }
+      @media (max-width: 375px) {
+        height: 80px;
+      }
+    }
+    .logosBucadorCarrito {
+      margin: 0px 0px 0px 100px;
+      img {
+        height: $heightImg - 290px;
+        transition: 2s;
+        &:hover {
+          transform: scale(2, 2);
+        }
+      }
+    }
+    nav {
+      .navegador {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin: 0px 0px 10px 0px;
+        border: solid;
+        border-width: 0.5px;
+        padding: 8px;
+        background-color: $bgRosa;
+        list-style-type: none;
+        @media (max-width: 697px) {
+          display: none;
+        }
+        ul {
+          list-style: none;
+          padding: 20px;
+          font-size: 0;
+          width: 310%;
+          position: absolute;
+          display: none;
+            li {
+              display: block;
+              @media (max-width: 697px) {
+                display: inline-block;
+                margin-left: 45px;
+              }
+            }
+        }
+        li {
+          display: inline-block;
+          position: relative;
+          font-size: 1.125rem;
+          font-family: "Mali", cursive;
+          &:hover ul {
+            display: block;
+            background-color: rgba(255, 218, 224, 0.616);
+          }
+          a {
+            padding: 8px;
+            &:hover {
+              font-weight: bold;
+            }
+          }
+          @media (max-width: 697px) {
+            display: block;
+            font-size: 16px;
+            margin: -3px;
+            text-align: center;
+          }
+        }
+      }
+      .navLink {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        font-family: "Mali", cursive;
+        font-weight: normal;
+        font-size: 1.15rem;
+        @media (max-width: 697px) {
+          font-size: medium;
+        }
+      }
+    }
+    .containerDos {
+      display: none;
+        @media (max-width: 697px) {
+           display: flex;
+           .navBar {
+              background-color: rgba(255, 218, 224, 0.897);
+              flex: 1;
+            a {
+              color: black;
+              &:hover {
+                font-weight: bold;
+              }
+            }
+          }
+        }
+      }
+
+
+}

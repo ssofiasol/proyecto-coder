@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  main {
+      .Cursos {
+        font-size: $sizeSubtitulos;
+        background: $bgGradiente1;
+        background: $bgGradiente2;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+      }
+      .nombreDeCursos {
+        font-size: $sizeSubtitulosChicos;
+        margin-top: 30px;
+        text-align: center;
+        background: $bgGradiente1;
+        background: $bgGradiente2;
+        width: 100%;
+        padding: 2px;
+      }
+      .secInsumos {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: 20px 20px 30px 40px;
+        .fotoCursosEInsumos {
+            width: 300px;
+            border-color: rgba(241, 26, 73, 0.432);
+            border-style: dotted;
+            border-width: 5px;
+            padding: 5px;
+        }
+        .textoCursosEInsumos {
+            display: flex;
+            align-items: center;
+            margin: 0px 30px 20px 30px;
+            text-align: justify;
+            font-size: $sizeDeLetraGeneral;
+            font-weight: bold;
+        }
+        .textoEsmaltadoYEngobe {
+            display: flex;
+            align-items: center;
+            margin: 0px 30px 20px 30px;
+            text-align: justify;
+            font-size: $sizeDeLetraGeneral;
+            font-weight: bold;
+        }
+      }
+      .videoBowl {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        margin: 20px 20px 30px 40px;
+        video {
+            width: 300px;
+            padding: 5px;
+            border-color: rgba(241, 26, 73, 0.432);
+            border-style: dotted;
+            border-width: 5px;
+        }
+    }
+  }

@@ -1,0 +1,54 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+main {
+    .Contacto {
+        font-size: $sizeSubtitulos;
+        background: $bgGradiente1;
+        background: $bgGradiente2;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+      }
+    .contactos {
+        color: black;
+        text-align: center;
+        margin-top: 30px;
+        background-image: url("/imagenes/p\ cuchara.jpeg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.9;
+        .fildset {
+            padding: 60px;
+            font-size: $sizeDeLetraGeneral;
+        }
+        @mixin secContacto ($margen){
+            margin: $margen;
+            font-weight: bold;
+        }
+        .nombreDelContacto {
+            @include secContacto (0px 0px 20px 0px)
+        }
+        .email {
+            @include secContacto (0px 0px 20px 0px)
+        }
+        .motivo {
+            @include secContacto (0px 0px 20px 0px)
+        }
+        .yaCompraste {
+            @include secContacto (0px 0px 20px 0px)
+        }
+        .teLeo {
+            @include secContacto (0px 0px 10px 0px)
+        }
+        .términosCondiciones {
+            @include secContacto (10px 0px 10px 0px)
+        }
+        .enviarDescartar {
+            margin-bottom: 20px;
+        }
+    }
+}

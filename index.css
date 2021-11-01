@@ -5,32 +5,31 @@
 }
 body {
   font-family: "Neucha", cursive;
-  background-color: burlywood;
-  background-image: url(./imagenes/fondo.jpg);
+  background-color: rgb(255, 255, 255);
+ /* background-image: url(./imagenes/fondo.jpg);*/
   background-size: cover;
   background-attachment: fixed;
 }
 /*--------------------------- Acá empieza el header del INDEX---------------------------*/
 img:hover {
-  border: double 1px rgba(255, 255, 255, 0);
+  border: solid 1px rgba(255, 255, 255, 0);
   transition: 0.7s;
 }
 .iniciarSesión {
   display: inline-block;
   width: 97%;
-  position: sticky;
   text-align: right;
   font-size: small;
   font-family: "Neucha", cursive;
   margin: 30px 0px 10px auto;
 }
 .nombre {
-  font-family: sans-serif;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0px 0px 0px 10px;
+  margin: 0px 0px 5px 10px;
+  font-family: sans-serif;
 }
 a:hover {
   color: black;
@@ -412,6 +411,12 @@ a {
   font-size: large;
   font-weight: bold;
 }
+.VideoBowl {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 20px 20px 30px 40px;
+}
 .videoBowl video {
   width: 300px;
   padding: 5px;
@@ -454,9 +459,9 @@ a {
   display: inline-block;
   position: relative;
   left: 20px;
-  padding: 10px;
-  border-color: rgba(240, 148, 10, 0.726);
-  border-style: dotted;
+  padding: 5px;
+  border-color: rgba(238, 100, 204, 0.726);
+  border-style: solid;
   border-width: 5px;
   margin: 0px 20px 70px 40px;
 }
@@ -476,6 +481,29 @@ a {
   font-weight: bold;
   text-align: center;
 }
+/*--------------------------- Grids ---------------------------*/
+.grillaNosotras {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: none;
+  grid-template-areas: 
+  "titulo titulo titulo titulo"
+  "foto texto texto texto"
+  "footer footer footer footer";
+}
+.grillaNosotras main {
+  grid-area: titulo;   
+} 
+.grillaNosotras .foto {
+  grid-area: foto;
+}
+.grillaNosotras .textoNosotras {
+  grid-area: texto;
+}
+.grillaNosotras footer {
+  grid-area: footer;
+}
+
 /*---------------------------Acá empieza CONTACTO---------------------------*/
 .Contacto {
   font-size: xx-large;
@@ -498,6 +526,7 @@ a {
   background-size: cover;
   background-repeat: no-repeat;
   opacity: 0.9;
+  color: black;
 }
 .nombreDelContacto {
   margin: 0px 0px 20px 0px;
@@ -527,38 +556,15 @@ a {
   margin-bottom: 20px;
 }
 
-/*--------------------------- Grids ---------------------------*/
-.grillaNosotras {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: none;
-    grid-template-areas: 
-    "titulo titulo titulo titulo"
-    "foto texto texto texto"
-    "footer footer footer footer";
-}
-.grillaNosotras main {
-    grid-area: titulo;   
-} 
-.grillaNosotras .foto {
-    grid-area: foto;
-}
-.grillaNosotras .textoNosotras {
-    grid-area: texto;
-}
-.grillaNosotras footer {
-    grid-area: footer;
-}
+
 /*--------------------------- Acá empieza MEDIA QUERIES Dispositivos chicos---------------------------*/
 
 @media (max-width: 697px) {
-  .navBar {
-    background-color: rgba(255, 218, 224, 0.897);
-  }
   .containerDos {
     display: flex;
   }
-  .navbar {
+  .navBar {
+    background-color: rgba(255, 218, 224, 0.897);
     flex: 1;
   }
   .navbar a {

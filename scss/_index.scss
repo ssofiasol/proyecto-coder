@@ -3,112 +3,6 @@
     margin: 0;
     box-sizing: border-box;
   }
-  body {
-    a {
-      color: black;
-      text-decoration: none;
-      &:hover {
-        color: black;
-        text-decoration: none;
-      }
-    }
-    font-family: $fuenteGeneral;
-    background-color: burlywood;
-    background-image: url(./imagenes/fondo.jpg);
-    background-size: cover;
-    background-attachment: fixed;
-    img:hover {
-      border: double 1px rgba(255, 255, 255, 0);
-      transition: 0.7s;
-    }
-      header {
-        .iniciarSesión {
-          display: inline-block;
-          width: 97%;
-          position: sticky;
-          text-align: right;
-          font-size: small;
-          font-family: $fuenteGeneral;
-          margin: 30px 0px 10px auto;
-        }
-        .nombre {
-          font-family: sans-serif;
-          display: flex;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          margin: 0px 0px 0px 10px;
-        }
-        .pottery {
-          font-family: "Satisfy", cursive;
-          margin-left: 53px;
-        }
-        .arcoiris {
-          flex: 1;
-          text-align: center;
-        }
-        .logosBucadorCarrito {
-          margin-right: 40px;
-          img {
-            height: $heightImg - 290px;
-            transition: 2s;
-            &:hover {
-              transform: scale(2, 2);
-            }
-          }
-        }
-        nav {
-          .navegador {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-around;
-            margin: 0px 0px 10px 0px;
-            border: solid;
-            border-width: 0.5px;
-            padding: 8px;
-            background-color: $bgRosa;
-            list-style-type: none;
-            ul {
-              list-style: none;
-              padding: 20px;
-              font-size: 0;
-              width: 310%;
-              position: absolute;
-              display: none;
-                li {
-                  display: block;
-                }
-            }
-            li {
-              display: inline-block;
-              position: relative;
-              font-size: 18px;
-              font-family: "Mali", cursive;
-              &:hover ul {
-                display: block;
-                background-color: rgba(255, 218, 224, 0.616);
-              }
-              a {
-                padding: 8px;
-                &:hover {
-                  font-weight: bold;
-                }
-              }
-            }
-          }
-          .navLink {
-            text-decoration: none;
-            color: rgb(0, 0, 0);
-            font-family: "Mali", cursive;
-            font-weight: normal;
-            font-size: large;
-          }
-        }
-        .containerDos {
-          display: none;
-        }      
-    }
     main {
       .primerasImágenes {
         margin: 30px 0px 30px auto;
@@ -117,10 +11,24 @@
         justify-content: center;
         --animate-duration: 1s;
         img {
-          height: $heightImg
+          height: $heightImg;
+          @media (max-width: 697px) {
+            height: 260px;
+            width: 260px;
+          }
+          @media (min-width: 698px) and (max-width: 1090px) {
+            height: 240px;
+          }
         }
         video {
-          height: $heightImg
+          height: $heightImg;
+          @media (max-width: 697px) {
+            height: 260px;
+            width: 260px;
+          }
+          @media (min-width: 698px) and (max-width: 1090px) {
+            height: 240px;
+          }
         }
       }
       .envíoTransfTarjetas {
@@ -130,26 +38,43 @@
         font-weight: bold;
         font-family: $fuenteGeneral;
         background-color: $bgRosa;
-        .envio {
+        @mixin secEnvíos ($textAling, $margin) {
           display: inline-block;
           width: 30%;
-          text-align: left;
-          margin: 20px 0px 20px 18px;
+          text-align: $textAling;
+          margin: $margin;
+        }
+        .envio {
+          @include secEnvíos(left, 20px 0px 20px 18px);
+          @media (max-width: 697px) {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin: 0px 0px 20px 0px;
+          }
         }
         .transf {
-          display: inline-block;
-          width: 30%;
-          text-align: center;
-          margin: 20px 0px 20px auto;
+          @include secEnvíos(center, 20px 0px 20px auto);
+          @media (max-width: 697px) {
+            display: block;
+            width: 100%;
+            text-align: center;
+            margin: 20px 0px 20px 0px;
+          }
         }
         .tarjetas {
           display: inline-block;
           width: 36%;
           text-align: right;
+          @media (max-width: 697px) {
+            display: block;
+            width: 100%;
+            text-align: center;
+          }
         }
       }
       .destacadosTítulo {
-        font-size: 25px;
+        font-size: $sizeSubtitulosChicos;
         background-color: $bgRosa;
         margin: 50px 0px 30px 200px;
         font-family: $fuenteGeneral;
@@ -160,6 +85,11 @@
           &:hover {
             font-weight: bold;
           }
+        }
+        @media (max-width: 697px) {
+          margin: 50px 0px 10px 90px;
+          padding: 10px;
+          height: 40px;
         }
       }
       .container {
@@ -186,60 +116,3 @@
         font-family: $fuenteGeneral;
       }
     }
-    footer {
-      @mixin secRedes ($margin){
-        text-align: center;
-        font-size: larger;
-        background: $bgGradiente1;
-        background: $bgGradiente2;
-        margin: $margin;
-        font-family: "Handlee", cursive;
-      }
-      .insta {
-        @include secRedes(25px 0px 0px auto)
-      }
-      .logoDeInsta {
-        text-align: center;
-         img {
-           height: $heightImg - 275px;
-          }
-      }
-      .seguinos {
-        @include secRedes (0px 0px 20px auto)
-      }
-      .mapa {
-        font-family: $fuenteGeneral;
-        margin: 3px;
-        font-size: large;
-        margin-left: 20px;
-        margin-top: 7px;
-      }
-      .footerList {
-        display: inline-block;
-        width: 50%;
-        margin-left: 10px;
-        list-style-type: none;
-        font-family: $fuenteGeneral;
-        font-size: 16px;
-        font-weight: bold;
-        a {
-          text-decoration: none;
-          color: rgba(0, 0, 0, 0.692);
-          margin-left: 30px;
-        }
-      }
-      .seccFooterInfo {
-        display: inline-block;
-        width: 47%;
-        .footerInfo {
-          display: flex;
-          flex-direction: column;
-          text-align: end;
-          margin-bottom: 5px;
-          font-family: "Neucha", cursive;
-          font-size: 16px;
-          font-weight: bold;
-        } 
-      }
-    }
-  }

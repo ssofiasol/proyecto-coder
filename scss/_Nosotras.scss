@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+.grillaNosotras {
+    main {
+        .Nosotras {
+            font-size: $sizeSubtitulos;
+            background: $bgGradiente1;
+            background: $bgGradiente2;
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .foto {
+            display: inline-block;
+            position: relative;
+            left: 20px;
+            padding: 10px;
+            border-color: rgba(240, 148, 10, 0.726);
+            border-style: dotted;
+            border-width: 5px;
+            margin: 0px 20px 70px 40px;
+            img {
+               height: 300px;
+               transition: 2s;
+               &:hover {
+                   transform: scale(2,2);
+               }
+              }
+            }
+        .textoNosotras {
+            display: inline-block;
+            margin: 30px 30px 20px 30px;
+            text-align: justify;
+            font-size: large;
+            width: 66%;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+}

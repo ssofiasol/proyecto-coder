@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  main {
+      .Preguntas {
+        font-size: $sizeSubtitulos;
+        background: $bgGradiente1;
+        background: $bgGradiente2;
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+      }
+      .preguntasFrecuentes {
+        background-color: rgba(240, 238, 132, 0.589);
+        margin: 20px 40px 20px 40px;
+        line-height: 30px;
+        text-align: justify;
+        font-family: $fuenteGeneral;
+        padding: 30px;
+        p {
+            font-size: 1.2em;
+        }
+      }
+  }

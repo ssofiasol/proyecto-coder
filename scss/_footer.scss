@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+footer {
+    @mixin secRedes ($margin){
+      text-align: center;
+      font-size: larger;
+      background: $bgRosa;
+      margin: $margin;
+      font-family: "Handlee", cursive;
+    }
+    .insta {
+      @include secRedes(25px 0px 0px auto)
+    }
+    .logoDeInsta {
+      text-align: center;
+       img {
+         height: $heightImg - 275px;
+        }
+    }
+    .seguinos {
+      @include secRedes (0px 0px 20px auto)
+    }
+    .mapa {
+      font-family: $fuenteGeneral;
+      margin: 3px;
+      font-size: $sizeDeLetraGeneral;
+      margin-left: 20px;
+      margin-top: 7px;
+    }
+    .footerList {
+      display: inline-block;
+      width: 50%;
+      margin-left: 10px;
+      list-style-type: none;
+      font-family: $fuenteGeneral;
+      font-size: $sizeDeLetraGeneral;
+      font-weight: bold;
+      a {
+        text-decoration: none;
+        color: rgba(0, 0, 0, 0.692);
+        margin-left: 30px;
+      }
+      @media (max-width: 697px) {
+        width: 40%;
+        font-size: 14px;
+      }
+    }
+    .seccFooterInfo {
+      display: inline-block;
+      width: 47%;
+      .footerInfo {
+        display: flex;
+        flex-direction: column;
+        text-align: end;
+        margin-bottom: 5px;
+        font-family: $fuenteGeneral;
+        font-size: $sizeDeLetraGeneral;
+        font-weight: bold;
+        @media (max-width: 697px) {
+          width: 100%;
+          font-size: 14px;
+        }
+      } 
+    }
+  }
