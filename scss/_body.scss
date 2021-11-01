@@ -14,11 +14,11 @@
     }
     font-family: $fuenteGeneral;
     background-color: burlywood;
-    background-image: url("/imagenes/fondoRosaFuerte.jpg");
+    background-image: url("../imagenes/fondoRosaFuerte.jpg");
     background-size: cover;
     background-attachment: fixed;
     img:hover {
-      border: double 1px rgba(255, 255, 255, 0);
+      border: solid 1px rgba(255, 255, 255, 0);
       transition: 0.7s;
     }
   }
