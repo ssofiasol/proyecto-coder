@@ -9,25 +9,12 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
-        --animate-duration: 1s;
+        --animate-duration: 2s;
         img {
-          height: $heightImg;
-          @media (max-width: 697px) {
-            height: 260px;
-            width: 260px;
-          }
-          @media (min-width: 698px) and (max-width: 1090px) {
-            height: 240px;
-          }
-        }
-        video {
-          height: $heightImg;
-          @media (max-width: 697px) {
-            height: 260px;
-            width: 260px;
-          }
-          @media (min-width: 698px) and (max-width: 1090px) {
-            height: 240px;
+          height: 424.531px;
+          @media (max-width: 320px) {
+            height: 320px;
+            width: 320px;
           }
         }
       }
@@ -37,7 +24,7 @@
         padding: 10px;
         font-weight: bold;
         font-family: $fuenteGeneral;
-        background-color: $bgRosa;
+        background-color:  rgba(99, 8, 22, 0.322);
         @mixin secEnvíos ($textAling, $margin) {
           display: inline-block;
           width: 30%;
@@ -75,7 +62,7 @@
       }
       .destacadosTítulo {
         font-size: $sizeSubtitulosChicos;
-        background-color: $bgRosa;
+        background-color: $bgVioleta;
         margin: 50px 0px 30px 200px;
         font-family: $fuenteGeneral;
         padding: 12px;
@@ -96,9 +83,13 @@
         display: flex;
         flex-flow: row wrap;
         justify-content: center;
+        max-width: 100%;
+        margin: 0px 0px 40px 0px;
+        padding: 0px;
         .descripciónCarouselInicio {
           font-size: 20px;
           font-weight: bold;
+          --animate-duration: 3s;
           a {
             color: rgba(0, 0, 0, 0.733);
             text-decoration: none;
@@ -114,5 +105,13 @@
         font-size: larger;
         margin: 20px;
         font-family: $fuenteGeneral;
+      }
+      .botonSeccion {
+        display: flex;
+        justify-content: center;
+      }
+      .margenDelBoton {
+        padding: 0px;
+        margin: 0px;
       }
     }

@@ -13,12 +13,12 @@
       }
     }
     font-family: $fuenteGeneral;
-    background-color: burlywood;
-    background-image: url("../imagenes/fondoRosaFuerte.jpg");
-    background-size: cover;
-    background-attachment: fixed;
-    img:hover {
-      border: solid 1px rgba(255, 255, 255, 0);
-      transition: 0.7s;
+    background-color: rgb(255, 255, 255);   
+    img {
+      opacity: 1;
+    &:hover {
+      opacity: .8;
+      transition: 0.1s;
+     }
     }
   }

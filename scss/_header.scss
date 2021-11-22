@@ -8,12 +8,15 @@ header {
       display: flex;
       flex-direction: column;
       flex-wrap: nowrap;
+      @media (max-width: 1025px) {
+        order: 2;
+      }
     }
     .iniciarSesión {
       font-size: 0.875rem;
       font-family: $fuenteGeneral;
-      margin: 20px 40px 10px 0px;
-      @media (max-width: 697px) {
+      margin: 35px 40px 10px 0px;
+      @media (max-width: 1025px) {
         font-size: 12px;
       }
     }
@@ -23,42 +26,29 @@ header {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin: 30px 0px 0px 30px;
-      @media (max-width: 697px) {
+      margin: 0px 0px 0px 30px;
+      @media (max-width: 1025px) {
         margin: 30px 0px 0px 10px;
+        display: none;
       }
     }
     .nombreMarca {
       display: flex;
       flex-direction: column;
       justify-content: center;
+      margin: 27px 0px 20px 0px;
     }
     .pottery {
       font-family: "Satisfy", cursive;
       margin-left: 53px;
-    }
-    .imagenLogo {
-      flex: 1;
-      text-align: center;
-      height: 140px;
-      margin-bottom: 10px;
-      flex-wrap: wrap;
-      @media (max-width: 697px) {
-        display: none;
-        height: 110px;
-      }
-      @media (max-width: 375px) {
-        height: 80px;
-      }
-    }
+    }  
     .logosBucadorCarrito {
       margin: 0px 0px 0px 100px;
+      @media (max-width: 1025px) {
+        margin: 0;
+      }
       img {
         height: $heightImg - 290px;
-        transition: 2s;
-        &:hover {
-          transform: scale(2, 2);
-        }
       }
     }
     nav {
@@ -66,14 +56,12 @@ header {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        justify-content: space-around;
-        margin: 0px 0px 10px 0px;
-        border: solid;
-        border-width: 0.5px;
+        justify-content: space-evenly;
+        margin: 55px 0px 10px 0px;
         padding: 8px;
-        background-color: $bgRosa;
+        background-color: rgba(255, 192, 203, 0);
         list-style-type: none;
-        @media (max-width: 697px) {
+        @media (max-width: 1025px) {
           display: none;
         }
         ul {
@@ -83,11 +71,15 @@ header {
           width: 310%;
           position: absolute;
           display: none;
+          z-index: 1;
             li {
               display: block;
-              @media (max-width: 697px) {
+              @media (max-width: 1025px) {
                 display: inline-block;
                 margin-left: 45px;
+              }
+              &:not(:last-child){
+                border-right: 1px solid black;
               }
             }
         }
@@ -97,8 +89,8 @@ header {
           font-size: 1.125rem;
           font-family: "Mali", cursive;
           &:hover ul {
-            display: block;
-            background-color: rgba(255, 218, 224, 0.616);
+            display: flex;
+            width: 600px;
           }
           a {
             padding: 8px;
@@ -106,7 +98,7 @@ header {
               font-weight: bold;
             }
           }
-          @media (max-width: 697px) {
+          @media (max-width: 1025px) {
             display: block;
             font-size: 16px;
             margin: -3px;
@@ -120,27 +112,45 @@ header {
         font-family: "Mali", cursive;
         font-weight: normal;
         font-size: 1.15rem;
-        @media (max-width: 697px) {
+        @media (max-width: 1025px) {
           font-size: medium;
         }
+      }
+      .navBarContainer {
+        margin-left: 20px;        
       }
     }
     .containerDos {
       display: none;
-        @media (max-width: 697px) {
+        @media (max-width: 1025px) {
            display: flex;
            .navBar {
-              background-color: rgba(255, 218, 224, 0.897);
+              background-color: $bgVioleta;
               flex: 1;
-            a {
-              color: black;
-              &:hover {
-                font-weight: bold;
+              .marcaMobile {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                order: 1;
+                flex: 1;
+                .pottery {
+                  margin-left: 0;
+                }
+              }
+               a {
+                 color: black;
+                 &:hover {
+                 font-weight: bold;
+               }
+              }
+               .nav-item:not(:last-child) {
+                 margin-bottom: 7px;
               }
             }
+            .navbar-expand-custom .navbar-collapse .show{
+            display: flex!important;
+            flex-basis: auto;
           }
         }
       }
-
-
 }

@@ -4,10 +4,11 @@
   box-sizing: border-box;
 }
 footer {
+  background-color: $bgVioleta;
     @mixin secRedes ($margin){
       text-align: center;
       font-size: larger;
-      background: $bgRosa;
+      background-color: rgba(99, 8, 22, 0.322);
       margin: $margin;
       font-family: "Handlee", cursive;
     }
@@ -15,6 +16,7 @@ footer {
       @include secRedes(25px 0px 0px auto)
     }
     .logoDeInsta {
+      background-color: white;
       text-align: center;
        img {
          height: $heightImg - 275px;
