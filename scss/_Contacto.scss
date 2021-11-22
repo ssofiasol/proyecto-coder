@@ -21,7 +21,7 @@ main {
         background-repeat: no-repeat;
         opacity: 0.9;
         .fildset {
-            padding: 60px;
+            padding-top: 30px;
             font-size: $sizeDeLetraGeneral;
         }
         @mixin secContacto ($margen){

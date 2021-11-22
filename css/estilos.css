@@ -456,6 +456,10 @@ main .Nosotras {
 main .nosotrasContainer {
   display: flex;
   align-items: center; }
+  @media (max-width: 900px) {
+    main .nosotrasContainer {
+      flex-wrap: wrap;
+      justify-content: center; } }
   main .nosotrasContainer .foto {
     padding: 2px;
     border-color: black;
@@ -468,7 +472,8 @@ main .nosotrasContainer {
     font-size: large;
     font-weight: bold;
     text-align: center;
-    margin: 40px; }
+    margin: 40px;
+    min-width: 550px; }
 
 * {
   padding: 0;
@@ -492,7 +497,7 @@ main .contactos {
   background-repeat: no-repeat;
   opacity: 0.9; }
   main .contactos .fildset {
-    padding: 60px;
+    padding-top: 30px;
     font-size: 1rem; }
   main .contactos .nombreDelContacto {
     margin: 0px 0px 20px 0px;
