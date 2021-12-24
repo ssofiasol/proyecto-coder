@@ -4,153 +4,170 @@
   box-sizing: border-box;
 }
 header {
-    .crearCuenta {
-      display: flex;
-      flex-direction: column;
-      flex-wrap: nowrap;
-      @media (max-width: 1025px) {
-        order: 2;
+  .crearCuenta {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    @media (max-width: 1025px) {
+      order: 2;
+    }
+  }
+  .iniciarSesión {
+    font-size: 0.875rem;
+    font-family: $fuenteGeneral;
+    margin: 35px 40px 10px 0px;
+    @media (max-width: 1025px) {
+      font-size: 12px;
+    }
+  }
+  .nombre {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 0px 0px 0px 30px;
+    @media (max-width: 1025px) {
+      margin: 30px 0px 0px 10px;
+      display: none;
+    }
+  }
+  .nombreMarca {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 27px 0px 20px 0px;
+  }
+  .pottery {
+    font-family: "Satisfy", cursive;
+    margin-left: 53px;
+  }
+  .logosBucadorCarrito {
+    margin: 0px 0px 0px 100px;
+    @media (max-width: 1025px) {
+      margin: 0;
+    }
+    img {
+      height: $heightImg - 290px;
+    }
+    .carritoDesplegable {
+      border: 1px solid black;
+      position: absolute;
+      z-index: 100;
+      right: 0;
+      background-color: white;
+      width: 300px;
+      display: none;
+      &.desplegado {
+        display: inherit;
       }
     }
-    .iniciarSesión {
-      font-size: 0.875rem;
+    .estilosCarrito {
+      font-size: 20px;
       font-family: $fuenteGeneral;
-      margin: 35px 40px 10px 0px;
-      @media (max-width: 1025px) {
-        font-size: 12px;
-      }
+      padding: 10px;
     }
-    .nombre {
-      font-family: sans-serif;
+  }
+  nav {
+    .navegador {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
-      justify-content: space-between;
-      margin: 0px 0px 0px 30px;
+      justify-content: space-evenly;
+      margin: 55px 0px 10px 0px;
+      padding: 8px;
+      background-color: rgba(255, 192, 203, 0);
+      list-style-type: none;
       @media (max-width: 1025px) {
-        margin: 30px 0px 0px 10px;
         display: none;
       }
-    }
-    .nombreMarca {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      margin: 27px 0px 20px 0px;
-    }
-    .pottery {
-      font-family: "Satisfy", cursive;
-      margin-left: 53px;
-    }  
-    .logosBucadorCarrito {
-      margin: 0px 0px 0px 100px;
-      @media (max-width: 1025px) {
-        margin: 0;
-      }
-      img {
-        height: $heightImg - 290px;
-      }
-    }
-    nav {
-      .navegador {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        margin: 55px 0px 10px 0px;
-        padding: 8px;
-        background-color: rgba(255, 192, 203, 0);
-        list-style-type: none;
-        @media (max-width: 1025px) {
-          display: none;
-        }
-        ul {
-          list-style: none;
-          padding: 20px;
-          font-size: 0;
-          width: 310%;
-          position: absolute;
-          display: none;
-          z-index: 1;
-            li {
-              display: block;
-              @media (max-width: 1025px) {
-                display: inline-block;
-                margin-left: 45px;
-              }
-              &:not(:last-child){
-                border-right: 1px solid black;
-              }
-            }
-        }
+      ul {
+        list-style: none;
+        padding: 20px;
+        font-size: 0;
+        width: 310%;
+        position: absolute;
+        display: none;
+        z-index: 1;
         li {
-          display: inline-block;
-          position: relative;
-          font-size: 1.125rem;
-          font-family: "Mali", cursive;
-          &:hover ul {
-            display: flex;
-            width: 600px;
-          }
-          a {
-            padding: 8px;
-            &:hover {
-              font-weight: bold;
-            }
-          }
+          display: block;
           @media (max-width: 1025px) {
-            display: block;
-            font-size: 16px;
-            margin: -3px;
-            text-align: center;
+            display: inline-block;
+            margin-left: 45px;
+          }
+          &:not(:last-child) {
+            border-right: 1px solid black;
           }
         }
       }
-      .navLink {
-        text-decoration: none;
-        color: rgb(0, 0, 0);
+      li {
+        display: inline-block;
+        position: relative;
+        font-size: 1.125rem;
         font-family: "Mali", cursive;
-        font-weight: normal;
-        font-size: 1.15rem;
-        @media (max-width: 1025px) {
-          font-size: medium;
+        &:hover ul {
+          display: flex;
+          width: 600px;
         }
-      }
-      .navBarContainer {
-        margin-left: 20px;        
+        a {
+          padding: 8px;
+          &:hover {
+            font-weight: bold;
+          }
+        }
+        @media (max-width: 1025px) {
+          display: block;
+          font-size: 16px;
+          margin: -3px;
+          text-align: center;
+        }
       }
     }
-    .containerDos {
-      display: none;
-        @media (max-width: 1025px) {
-           display: flex;
-           .navBar {
-              background-color: $bgVioleta;
-              flex: 1;
-              .marcaMobile {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                order: 1;
-                flex: 1;
-                .pottery {
-                  margin-left: 0;
-                }
-              }
-               a {
-                 color: black;
-                 &:hover {
-                 font-weight: bold;
-               }
-              }
-               .nav-item:not(:last-child) {
-                 margin-bottom: 7px;
-              }
-            }
-            .navbar-expand-custom .navbar-collapse .show{
-            display: flex!important;
-            flex-basis: auto;
+    .navLink {
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+      font-family: "Mali", cursive;
+      font-weight: normal;
+      font-size: 1.15rem;
+      @media (max-width: 1025px) {
+        font-size: medium;
+      }
+    }
+    .navBarContainer {
+      margin-left: 20px;
+    }
+  }
+  .containerDos {
+    display: none;
+    @media (max-width: 1025px) {
+      display: flex;
+      .navBar {
+        background-color: $bgVioleta;
+        flex: 1;
+        .marcaMobile {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          order: 1;
+          flex: 1;
+          .pottery {
+            margin-left: 0;
           }
         }
+        a {
+          color: black;
+          &:hover {
+            font-weight: bold;
+          }
+        }
+        .nav-item:not(:last-child) {
+          margin-bottom: 7px;
+        }
       }
+      .navbar-expand-custom .navbar-collapse .show {
+        display: flex !important;
+        flex-basis: auto;
+      }
+    }
+  }
 }

@@ -49,6 +49,20 @@ header .logosBucadorCarrito {
       margin: 0; } }
   header .logosBucadorCarrito img {
     height: 30px; }
+  header .logosBucadorCarrito .carritoDesplegable {
+    border: 1px solid black;
+    position: absolute;
+    z-index: 100;
+    right: 0;
+    background-color: white;
+    width: 300px;
+    display: none; }
+    header .logosBucadorCarrito .carritoDesplegable.desplegado {
+      display: inherit; }
+  header .logosBucadorCarrito .estilosCarrito {
+    font-size: 20px;
+    font-family: "Neucha", cursive;
+    padding: 10px; }
 
 header nav .navegador {
   display: flex;

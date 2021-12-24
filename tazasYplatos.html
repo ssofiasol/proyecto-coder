@@ -27,6 +27,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="shortcut icon" href="./imagenes/logoCasita.svg" />
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="./js/clases.js/carrito.js"> </script>
+    <script src="./js/clases.js/itemCarrito.js"> </script>
+    <script src="./js/clases.js/producto.js"> </script>    
     <title>SOPHIES Pottery❣ - Tazas y platos</title>
   </head>
   <body>
@@ -58,7 +61,10 @@
               <div class="iniciarSesión">CREAR CUENTA - INICIAR SESIÓN</div>
               <div class="logosBucadorCarrito">
                 <img src="./imagenes/logoBuscador.svg" alt="Logo buscador"/>
-                <img src="./imagenes/logoCarrito.svg"  alt="Logo carrito"/>
+                <img id="logoCarrito" src="./imagenes/logoCarrito.svg"  alt="Logo carrito"/>
+                <div id="carrito" class="carritoDesplegable">
+                  <div id="totalCompra" class="estilosCarrito">Total: 0</div>
+                </div>
               </div>
             </div>
           </h1>
@@ -132,7 +138,7 @@
               </h5>
               <p class="card-text descripYbotonesImg">$670</p>
               <div class="descripYbotonesImg">
-                <p class="btn btn-danger m-1">Comprar</p>
+                <button class="btn btn-danger m-1">Comprar</button>
                 <p class="btn btn-secondary m-1 botonDos">Detalles</p>
               </div>
             </div>
@@ -150,7 +156,7 @@
               </h5>
               <p class="card-text descripYbotonesImg">$670</p>
               <div class="descripYbotonesImg">
-                <p class="btn btn-danger m-1">Comprar</p>
+                <button class="btn btn-danger m-1">Comprar</button>
                 <p class="btn btn-secondary m-1 botonDos">Detalles</p>
               </div>
             </div>
@@ -168,7 +174,7 @@
               </h5>
               <p class="card-text descripYbotonesImg">$670</p>
               <div class="descripYbotonesImg">
-                <p class="btn btn-danger m-1">Comprar</p>
+                <button class="btn btn-danger m-1">Comprar</button>
                 <p class="btn btn-secondary m-1 botonDos">Detalles</p>
               </div>
             </div>
@@ -186,7 +192,7 @@
               </h5>
               <p class="card-text descripYbotonesImg">$670</p>
               <div class="descripYbotonesImg">
-                <p class="btn btn-danger m-1">Comprar</p>
+                <button class="btn btn-danger m-1">Comprar</button>
                 <p class="btn btn-secondary m-1 botonDos">Detalles</p>
               </div>
             </div>
@@ -202,7 +208,7 @@
               <h5 class="card-title descripYbotonesImg">Taza Copo</h5>
               <p class="card-text descripYbotonesImg">$670</p>
               <div class="descripYbotonesImg">
-                <p class="btn btn-danger m-1">Comprar</p>
+                <button class="btn btn-danger m-1">Comprar</button>
                 <p class="btn btn-secondary m-1 botonDos">Detalles</p>
               </div>
             </div>
@@ -218,7 +224,7 @@
               <h5 class="card-title descripYbotonesImg">Taza Florcitas</h5>
               <p class="card-text descripYbotonesImg">$670</p>
               <div class="descripYbotonesImg">
-                <p class="btn btn-danger m-1">Comprar</p>
+                <button class="btn btn-danger m-1">Comprar</button>
                 <p class="btn btn-secondary m-1 botonDos">Detalles</p>
               </div>
             </div>
@@ -234,7 +240,7 @@
               <h5 class="card-title descripYbotonesImg">Taza Oro</h5>
               <p class="card-text descripYbotonesImg">$670</p>
               <div class="descripYbotonesImg">
-                <p class="btn btn-danger m-1">Comprar</p>
+                <button class="btn btn-danger m-1">Comprar</button>
                 <p class="btn btn-secondary m-1 botonDos">Detalles</p>
               </div>
             </div>
@@ -250,7 +256,7 @@
               <h5 class="card-title descripYbotonesImg">Taza Inicial</h5>
               <p class="card-text descripYbotonesImg">$670</p>
               <div class="descripYbotonesImg">
-                <p class="btn btn-danger m-1">Comprar</p>
+                <button class="btn btn-danger m-1">Comprar</button>
                 <p class="btn btn-secondary m-1 botonDos">Detalles</p>
               </div>
             </div>
@@ -289,6 +295,7 @@
         </div>
       </div>
     </footer>
+    <script src="./js/functions.js"> </script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
       integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
