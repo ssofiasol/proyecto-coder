@@ -31,3 +31,14 @@ logoCarrito.onclick = () => {
     
 }
 
+let botones = document.getElementsByClassName("btn");
+
+for (let index = 0; index < botones.length; index++) {
+    const element = botones[index];
+    element.onfocus = () => {
+        element.classList.add("btn-focused")
+    }
+    element.onblur = () => {
+        element.classList.remove("btn-focused")
+    }
+}
