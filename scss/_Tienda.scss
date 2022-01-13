@@ -103,6 +103,13 @@
       background-color: $bgVioleta;
       color: black;
     }
+    .btn {
+      max-height: 38px;
+      &.btn-focused {
+        zoom: 1.1;
+        max-height: unset;
+      }
+    }    
     .cards {
       --animate-duration: 2s;
     }

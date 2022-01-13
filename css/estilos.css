@@ -430,6 +430,12 @@ main .botonDos {
   background-color: rgba(99, 8, 22, 0.26);
   color: black; }
 
+main .btn {
+  max-height: 38px; }
+  main .btn.btn-focused {
+    zoom: 1.1;
+    max-height: unset; }
+
 main .cards {
   --animate-duration: 2s; }
 
