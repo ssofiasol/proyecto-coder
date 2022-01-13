@@ -11,23 +11,20 @@ for (let index = 0; index < botonesDanger.length; index++) {
         const producto = new Producto(nombreProducto, parseInt(precioProducto), 0)
         carrito.agregarItem(new ItemCarrito(1, producto))
         element.innerText = "Agregar más";
-        let itemDelCarrito = document.createElement("div");
-        itemDelCarrito.classList.add("estilosCarrito");
-        let textItemDelCarrito = document.createTextNode(`${producto.nombre} $${producto.precio}`);
-        itemDelCarrito.appendChild(textItemDelCarrito);
-        const divCarrito = document.getElementById("carrito")
-        divCarrito.insertBefore(itemDelCarrito, divCarrito.firstChild);
-        document.getElementById("totalCompra").innerText = `Total: $${carrito.calcularTotal()}`
+        let itemDelCarrito =  $('<div/>').addClass("estilosCarrito").text(`${producto.nombre} $${producto.precio}`)
+        const divCarrito = $("#carrito")[0]
+        divCarrito.prepend(itemDelCarrito[0], divCarrito.firstChild);
+        $("#totalCompra").text(`Total: $${carrito.calcularTotal()}`)
     }
 }
 
-logoCarrito.onclick = () => {
-    const carrito = document.getElementById("carrito") 
-        if (carrito.classList.contains("desplegado")) {
-            carrito.classList.remove("desplegado")
+
+$('#logoCarrito').click(() => {
+    const carrito = $('#carrito')
+        if (carrito.hasClass("desplegado")) {
+            carrito.removeClass("desplegado")
         } else {
-            carrito.classList.add("desplegado")
+            carrito.addClass("desplegado")
         }
-    
-}
+});
 
