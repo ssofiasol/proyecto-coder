@@ -422,9 +422,22 @@ main .row {
   margin-right: 0;
   margin-left: 0; }
 
-main .boton {
-  background-color: red;
-  color: black; }
+main .notificacion {
+  border: 1px solid black;
+  position: fixed;
+  z-index: 100;
+  left: 20px;
+  background-color: white;
+  width: 300px;
+  height: 100px;
+  bottom: 20px;
+  display: none;
+  font-size: 20px;
+  text-align: center;
+  align-items: center;
+  justify-content: center; }
+  main .notificacion.desplegado {
+    display: inherit; }
 
 main .botonDos {
   background-color: rgba(99, 8, 22, 0.26);

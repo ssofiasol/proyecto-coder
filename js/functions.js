@@ -34,8 +34,20 @@ for (let index = 0; index < botonesDanger.length; index++) {
         element.innerText = "Agregar más";
         agregarDivItemCarrito(producto.nombre, producto.precio);
         $("#totalCompra").text(`Total: $${carrito.calcularTotal()}`)
-        localStorage.setItem('carrito', JSON.stringify(carrito))
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        agregarCuadroDesplegable(producto.nombre, producto.precio);
     }
+}
+
+function agregarCuadroDesplegable(nombre, precio) {
+    $('#textoDeNotificacion').text(`Agregaste: ${nombre} $${precio}`)
+    
+    $('#cartelDeNotificacion')
+    .css("display", "flex")
+    .hide()
+    .fadeIn(1000, function () {
+        $('#cartelDeNotificacion').fadeOut(3000);
+    })    
 }
 
 $('#logoCarrito').click(() => {
