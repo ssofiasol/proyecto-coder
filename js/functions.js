@@ -17,9 +17,8 @@ function agregarBotonBorrar(nombre, elemento) {
     botonBorrar.appendTo(elemento);
 }
 
-function agregarDivItemCarrito(nombre, precio) {
-    let itemDelCarrito =  $(`<div/>`).attr("id", `producto-${idProducto(nombre)}`).addClass("estilosCarrito").text(`${nombre} $${precio}`)
-    var botonBorrar = $('<input type="button" value="X" />').addClass("botonBorrar");
+function agregarDivItemCarrito(nombre, precio, cantidad) {
+    let itemDelCarrito =  $(`<div/>`).attr("id", `producto-${idProducto(nombre)}`).addClass("estilosCarrito").text(`${cantidad} ${nombre} $${precio} c/u`)
     agregarBotonBorrar(nombre, itemDelCarrito);
     const divCarrito = $("#carrito")[0]
     divCarrito.prepend(itemDelCarrito[0], divCarrito.firstChild);
@@ -40,7 +39,7 @@ for (let index = 0; index < jsonCarrito.items.length; index++) {
     const element = jsonCarrito.items[index];
     const producto = new Producto(element.producto.nombre, parseInt(element.producto.precio), 0)
     carrito.agregarItem(new ItemCarrito(element.cantidad, producto))
-    agregarDivItemCarrito(producto.nombre, producto.precio)
+    agregarDivItemCarrito(producto.nombre, producto.precio, element.cantidad)
 }
 document.getElementById("totalCompra").innerText = `Total: $${carrito.calcularTotal()}`
 
@@ -58,7 +57,7 @@ for (let index = 0; index < botonesDanger.length; index++) {
         if(itemIgualPreexistente){
             actualizarDivItemCarrito(producto.nombre, producto.precio, itemIgualPreexistente.cantidad + 1)
         }else {
-            agregarDivItemCarrito(producto.nombre, producto.precio)
+            agregarDivItemCarrito(producto.nombre, producto.precio, 1)
         }
         carrito.agregarItem(nuevoItemCarrito)
         element.innerText = "Agregar más";
