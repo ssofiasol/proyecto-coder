@@ -4,14 +4,17 @@ class Carrito {
     }
 
     agregarItem = (item) => {
-        let itemEncontrado = this.items.find(i => item.producto === i.producto);
+        let itemEncontrado = this.items.find(i => item.producto.nombre === i.producto.nombre);
         if (itemEncontrado) {
             itemEncontrado.agregarCantidad(item.cantidad);
         }
         else {
             this.items.push(item);
         }
-        
+    }
+
+    eliminarItemPorNombre = (nombre) => {
+        this.items = this.items.filter(i => i.producto.nombre !== nombre)
     }
 
     calcularTotal = () => {
@@ -21,5 +24,9 @@ class Carrito {
         }
 
         return total
+    }
+
+    conseguirItem = (item) => {
+        return this.items.find(i => item.producto.nombre === i.producto.nombre);
     }
 }

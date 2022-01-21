@@ -26,7 +26,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link rel="shortcut icon" href="./imagenes/logoCasita.svg" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="css/estilos.css">
+    <script src="./js/clases.js/carrito.js"> </script>
+    <script src="./js/clases.js/itemCarrito.js"> </script>
+    <script src="./js/clases.js/producto.js"> </script>
+    <script src="./js/carritoInicial/json.js"> </script>
+    <script src="./js/climaConAjax.js"> </script>          
     <title>SOPHIES Pottery❣ - Preguntas frecuentes</title>
   </head>
   <body>
@@ -54,15 +61,18 @@
               </ul>
             </nav> 
           </div> 
-            <div class="crearCuenta">
-              <div class="iniciarSesión">CREAR CUENTA - INICIAR SESIÓN</div>
-              <div class="logosBucadorCarrito">
-                <img src="./imagenes/logoBuscador.svg" alt="Logo buscador"/>
-                <img src="./imagenes/logoCarrito.svg"  alt="Logo carrito"/>
+          <div class="crearCuenta">
+            <div class="iniciarSesión">CREAR CUENTA - INICIAR SESIÓN</div>
+            <div class="logosBucadorCarrito">
+              <img src="./imagenes/logoBuscador.svg" alt="Logo buscador"/>
+              <img id="logoCarrito" src="./imagenes/logoCarrito.svg"  alt="Logo carrito"/>
+              <div id="carrito" class="carritoDesplegable">
+                <div id="totalCompra" class="estilosCarrito">Total: 0</div>
               </div>
             </div>
-          </h1>
-    </section>
+          </div>
+        </h1>
+  </section>
  <!------------------------------------Acá comienza el NAV DE BOOTSTRAP ----------------------------------->
  <section class="containerDos ">
   <nav class="navbar navbar-expand-custom navbar-light navBar">            
@@ -172,10 +182,12 @@
             <div class="footerInfo">  1123456789</div>
             <div class="footerInfo"> sophiespottery@gmail.com</div>
             <div class="footerInfo"> Lanús - Bs. As. - Argentina</div>
+            <div id="clima" class="footerInfo"> </div>
           </div>
         </div>
       </div>
     </footer>
+    <script src="./js/functions.js"> </script>
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
       integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"

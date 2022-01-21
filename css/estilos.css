@@ -63,6 +63,8 @@ header .logosBucadorCarrito {
     font-size: 20px;
     font-family: "Neucha", cursive;
     padding: 10px; }
+  header .logosBucadorCarrito .botonBorrar {
+    margin-left: 10px; }
 
 header nav .navegador {
   display: flex;

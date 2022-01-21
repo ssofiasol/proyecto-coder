@@ -2,10 +2,32 @@
 let jsonCarrito;
 let carrito = new Carrito();
 
+function idProducto(nombre) {
+    return nombre.replace(/\s+/g, '-').replace(/\+/g, '-').toLowerCase()
+}
+
+function agregarBotonBorrar(nombre, elemento) {
+    var botonBorrar = $('<input type="button" value="X" />').addClass("botonBorrar");
+    botonBorrar.click({nombre}, (event) => {
+        $(`#producto-${idProducto(event.data.nombre)}`).remove()
+        carrito.eliminarItemPorNombre(event.data.nombre)
+        $("#totalCompra").text(`Total: $${carrito.calcularTotal()}`)
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+    })
+    botonBorrar.appendTo(elemento);
+}
+
 function agregarDivItemCarrito(nombre, precio) {
-    let itemDelCarrito =  $('<div/>').addClass("estilosCarrito").text(`${nombre} $${precio}`)
+    let itemDelCarrito =  $(`<div/>`).attr("id", `producto-${idProducto(nombre)}`).addClass("estilosCarrito").text(`${nombre} $${precio}`)
+    var botonBorrar = $('<input type="button" value="X" />').addClass("botonBorrar");
+    agregarBotonBorrar(nombre, itemDelCarrito);
     const divCarrito = $("#carrito")[0]
     divCarrito.prepend(itemDelCarrito[0], divCarrito.firstChild);
+}
+
+function actualizarDivItemCarrito(nombre, precio, cantidad) {
+    $(`#producto-${idProducto(nombre)}`).text(`${cantidad} ${nombre} $${precio} c/u`)
+    agregarBotonBorrar(nombre, $(`#producto-${idProducto(nombre)}`))
 }
 
 if (localStorage.getItem('carrito')) {
@@ -30,9 +52,16 @@ for (let index = 0; index < botonesDanger.length; index++) {
         const nombreProducto = element.parentNode.parentNode.querySelector('.card-title').innerText;
         const precioProducto = element.parentNode.parentNode.querySelector('.card-text').innerText.replace('$', '');
         const producto = new Producto(nombreProducto, parseInt(precioProducto), 0)
-        carrito.agregarItem(new ItemCarrito(1, producto))
+        
+        const nuevoItemCarrito = new ItemCarrito(1, producto)
+        const itemIgualPreexistente = carrito.conseguirItem(nuevoItemCarrito)
+        if(itemIgualPreexistente){
+            actualizarDivItemCarrito(producto.nombre, producto.precio, itemIgualPreexistente.cantidad + 1)
+        }else {
+            agregarDivItemCarrito(producto.nombre, producto.precio)
+        }
+        carrito.agregarItem(nuevoItemCarrito)
         element.innerText = "Agregar más";
-        agregarDivItemCarrito(producto.nombre, producto.precio);
         $("#totalCompra").text(`Total: $${carrito.calcularTotal()}`)
         localStorage.setItem('carrito', JSON.stringify(carrito));
         agregarCuadroDesplegable(producto.nombre, producto.precio);
@@ -41,7 +70,6 @@ for (let index = 0; index < botonesDanger.length; index++) {
 
 function agregarCuadroDesplegable(nombre, precio) {
     $('#textoDeNotificacion').text(`Agregaste: ${nombre} $${precio}`)
-    
     $('#cartelDeNotificacion')
     .css("display", "flex")
     .hide()
