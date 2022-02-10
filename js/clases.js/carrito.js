@@ -13,6 +13,16 @@ class Carrito {
         }
     }
 
+    agregarCantidadAItemPorNombre = (nombre, cantidad) => {
+        let itemEncontrado = this.items.find(i => i.producto.nombre === nombre);
+        
+        itemEncontrado.agregarCantidad(cantidad);
+        
+        if (itemEncontrado.cantidad <= 0){
+            this.eliminarItemPorNombre(nombre)
+        }
+    }
+
     eliminarItemPorNombre = (nombre) => {
         this.items = this.items.filter(i => i.producto.nombre !== nombre)
     }
@@ -28,5 +38,9 @@ class Carrito {
 
     conseguirItem = (item) => {
         return this.items.find(i => item.producto.nombre === i.producto.nombre);
+    }
+
+    conseguirItemPorNombre = (nombre) => {
+        return this.items.find(i => nombre === i.producto.nombre);
     }
 }

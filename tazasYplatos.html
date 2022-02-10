@@ -32,7 +32,6 @@
     <script src="./js/clases.js/carrito.js"> </script>
     <script src="./js/clases.js/itemCarrito.js"> </script>
     <script src="./js/clases.js/producto.js"> </script>
-    <script src="./js/carritoInicial/json.js"> </script>
     <script src="./js/climaConAjax.js"> </script>          
     <title>SOPHIES Pottery❣ - Tazas y platos</title>
   </head>
@@ -61,18 +60,15 @@
               </ul>
             </nav> 
           </div> 
-            <div class="crearCuenta">
-              <div class="iniciarSesión">CREAR CUENTA - INICIAR SESIÓN</div>
-              <div class="logosBucadorCarrito">
-                <img src="./imagenes/logoBuscador.svg" alt="Logo buscador"/>
-                <img id="logoCarrito" src="./imagenes/logoCarrito.svg"  alt="Logo carrito"/>
-                <div id="carrito" class="carritoDesplegable">
-                  <div id="totalCompra" class="estilosCarrito">Total: 0</div>
-                </div>
-              </div>
+          <div class="crearCuenta">
+            <div class="iniciarSesión">CREAR CUENTA - INICIAR SESIÓN</div>
+            <div class="logosBucadorCarrito">
+              <img src="./imagenes/logoBuscador.svg" alt="Logo buscador"/>
+              <img src="./imagenes/logoCarrito.svg" class="logoCarrito" alt="Logo carrito"/>
             </div>
-          </h1>
-    </section>
+          </div>
+        </h1>
+  </section>
  <!------------------------------------Acá comienza el NAV DE BOOTSTRAP ----------------------------------->
  <section class="containerDos ">
   <nav class="navbar navbar-expand-custom navbar-light navBar">            
@@ -86,7 +82,7 @@
         <div class="crearCuenta">
           <div class="logosBucadorCarrito">
             <img src="./imagenes/logoBuscador.svg" alt="Logo buscador"/>
-            <img src="./imagenes/logoCarrito.svg"  alt="Logo carrito"/>
+            <img src="./imagenes/logoCarrito.svg"  alt="Logo carrito" class="logoCarrito"/>
             <img src="./imagenes/user.svg"  alt="Logo usuario"/>
           </div>
         </div>
@@ -124,6 +120,9 @@
     </div>
   </nav>
 </section>
+<div id="carrito" class="carritoDesplegable">
+  <div id="totalCompra" class="estilosCarrito">Total: 0</div>
+</div>
 </header>
     <!------------------------------------------Acá comienza el MAIN ----------------------------------------->
     <main>
@@ -138,9 +137,9 @@
               alt="Combo flores"/>
             <div class="card-body">
               <h5 class="card-title descripYbotonesImg">
-                Taza + Plato Floreado
+                Combo Florida
               </h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <p class="card-text descripYbotonesImg">$1100</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -156,9 +155,9 @@
               alt="Combo puntos"/>
             <div class="card-body">
               <h5 class="card-title descripYbotonesImg">
-                Taza + Plato con Puntos
+                Combo puntos
               </h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <p class="card-text descripYbotonesImg">$1250</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -174,9 +173,9 @@
               alt="Combo rosa" />
             <div class="card-body">
               <h5 class="card-title descripYbotonesImg">
-                Taza + Plato y Cuchara con Oro
+                Super combo
               </h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <p class="card-text descripYbotonesImg">$1250</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -192,9 +191,9 @@
               alt="Combo con oro"/>
             <div class="card-body">
               <h5 class="card-title descripYbotonesImg">
-                Taza + Plato con Oro
+                Combo Amelí
               </h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <p class="card-text descripYbotonesImg">$1250</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -209,8 +208,8 @@
               class="card-img-top" 
               alt="Taza copo" />
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Taza Copo</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Taza copo</h5>
+              <p class="card-text descripYbotonesImg">$850</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -225,8 +224,8 @@
               class="card-img-top"
               alt="Taza florcitas"/>
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Taza Florcitas</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Taza florcitas</h5>
+              <p class="card-text descripYbotonesImg">$850</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -241,8 +240,8 @@
               class="card-img-top" 
               alt="Taza oro" />
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Taza Oro</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Taza oro</h5>
+              <p class="card-text descripYbotonesImg">$850</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -257,8 +256,8 @@
               class="card-img-top"
               alt="Taza inicial"/>
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Taza Inicial</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Taza inicial</h5>
+              <p class="card-text descripYbotonesImg">$850</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>

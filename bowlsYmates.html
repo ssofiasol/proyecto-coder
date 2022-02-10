@@ -32,7 +32,6 @@
     <script src="./js/clases.js/carrito.js"> </script>
     <script src="./js/clases.js/itemCarrito.js"> </script>
     <script src="./js/clases.js/producto.js"> </script>
-    <script src="./js/carritoInicial/json.js"> </script>
     <script src="./js/climaConAjax.js"> </script>       
     <title>SOPHIES Pottery❣ - Bowls y mates</title>
   </head>
@@ -65,10 +64,7 @@
             <div class="iniciarSesión">CREAR CUENTA - INICIAR SESIÓN</div>
             <div class="logosBucadorCarrito">
               <img src="./imagenes/logoBuscador.svg" alt="Logo buscador"/>
-              <img id="logoCarrito" src="./imagenes/logoCarrito.svg"  alt="Logo carrito"/>
-              <div id="carrito" class="carritoDesplegable">
-                <div id="totalCompra" class="estilosCarrito">Total: 0</div>
-              </div>
+              <img src="./imagenes/logoCarrito.svg" class="logoCarrito" alt="Logo carrito"/>
             </div>
           </div>
         </h1>
@@ -86,7 +82,7 @@
         <div class="crearCuenta">
           <div class="logosBucadorCarrito">
             <img src="./imagenes/logoBuscador.svg" alt="Logo buscador"/>
-            <img src="./imagenes/logoCarrito.svg"  alt="Logo carrito"/>
+            <img src="./imagenes/logoCarrito.svg"  alt="Logo carrito" class="logoCarrito"/>
             <img src="./imagenes/user.svg"  alt="Logo usuario"/>
           </div>
         </div>
@@ -124,6 +120,9 @@
     </div>
   </nav>
 </section>
+<div id="carrito" class="carritoDesplegable">
+  <div id="totalCompra" class="estilosCarrito">Total: 0</div>
+</div>
 </header>
     <!------------------------------------------Acá comienza el MAIN ----------------------------------------->
     <main>
@@ -137,8 +136,8 @@
               class="card-img-top"
               alt="Bowl leyenda"/>
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Bowl Leyenda</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Bowl leyenda</h5>
+              <p class="card-text descripYbotonesImg">$800</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -153,8 +152,8 @@
               class="card-img-top" 
               alt="Bowl chancho" />
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Bowl salpicado</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Bowl chanchito</h5>
+              <p class="card-text descripYbotonesImg">$900</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -169,8 +168,8 @@
               class="card-img-top"
               alt="Bowl pajaritos"/>
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Bowl Pajaritos</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Bowl pajaritos</h5>
+              <p class="card-text descripYbotonesImg">$700</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -185,8 +184,8 @@
               class="card-img-top"
               alt="Bowl ancla"/>
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Bowl Ancla</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Bowl ancla</h5>
+              <p class="card-text descripYbotonesImg">$800</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -201,8 +200,8 @@
               class="card-img-top" 
               alt="Mate moño" />
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Mate Moño</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Mate moño</h5>
+              <p class="card-text descripYbotonesImg">$800</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -217,8 +216,8 @@
               class="card-img-top" 
               alt="Mate ojo" />
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Mate Ojo</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Mate ojo</h5>
+              <p class="card-text descripYbotonesImg">$600</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -233,8 +232,8 @@
               class="card-img-top"
               alt="Mate unicornio"/>
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Mate Unicornio</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Mate unicornio</h5>
+              <p class="card-text descripYbotonesImg">$800</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -249,8 +248,8 @@
               class="card-img-top"
               alt="Mate clásico"/>
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Mate Clásico</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Mate clásico</h5>
+              <p class="card-text descripYbotonesImg">$650</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <a href="#" class="btn btn-secondary m-1 botonDos">Detalles </a>

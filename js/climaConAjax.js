@@ -19,6 +19,6 @@ function cargarClima() {
 }
 
 $( document ).ready(function() {
-    cargarClima()
+   cargarClima()
     setInterval(cargarClima, 120000)
   });

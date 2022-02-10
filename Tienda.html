@@ -32,8 +32,7 @@
     <link rel="stylesheet" href="css/estilos.css">
     <script src="./js/clases.js/carrito.js"> </script>
     <script src="./js/clases.js/itemCarrito.js"> </script>
-    <script src="./js/clases.js/producto.js"> </script>
-    <script src="./js/carritoInicial/json.js"> </script>
+    <script src="./js/clases.js/producto.js"> </script>  
     <script src="./js/climaConAjax.js"> </script>          
     <title>SOPHIES Pottery❣ - Tienda general</title>
   </head>
@@ -66,10 +65,7 @@
             <div class="iniciarSesión">CREAR CUENTA - INICIAR SESIÓN</div>
             <div class="logosBucadorCarrito">
               <img src="./imagenes/logoBuscador.svg" alt="Logo buscador"/>
-              <img id="logoCarrito" src="./imagenes/logoCarrito.svg"  alt="Logo carrito"/>
-              <div id="carrito" class="carritoDesplegable">
-                <div id="totalCompra" class="estilosCarrito">Total: 0</div>
-              </div>
+              <img src="./imagenes/logoCarrito.svg" class="logoCarrito" alt="Logo carrito"/>
             </div>
           </div>
         </h1>
@@ -87,7 +83,7 @@
         <div class="crearCuenta">
           <div class="logosBucadorCarrito">
             <img src="./imagenes/logoBuscador.svg" alt="Logo buscador"/>
-            <img src="./imagenes/logoCarrito.svg"  alt="Logo carrito"/>
+            <img src="./imagenes/logoCarrito.svg"  alt="Logo carrito" class="logoCarrito"/>
             <img src="./imagenes/user.svg"  alt="Logo usuario"/>
           </div>
         </div>
@@ -125,6 +121,9 @@
     </div>
   </nav>
 </section>
+<div id="carrito" class="carritoDesplegable">
+  <div id="totalCompra" class="estilosCarrito">Total: 0</div>
+</div>
 </header>
     <!------------------------------------------Acá comienza el MAIN ----------------------------------------->
     <main>

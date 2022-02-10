@@ -26,7 +26,6 @@
   <script src="./js/clases.js/carrito.js"> </script>
   <script src="./js/clases.js/itemCarrito.js"> </script>
   <script src="./js/clases.js/producto.js"> </script>
-  <script src="./js/carritoInicial/json.js"> </script>
   <script src="./js/climaConAjax.js"> </script>          
   <title>SOPHIES Pottery ❣ - Inicio</title>
 </head>
@@ -59,66 +58,66 @@
             <div class="iniciarSesión">CREAR CUENTA - INICIAR SESIÓN</div>
             <div class="logosBucadorCarrito">
               <img src="./imagenes/logoBuscador.svg" alt="Logo buscador"/>
-              <img id="logoCarrito" src="./imagenes/logoCarrito.svg"  alt="Logo carrito"/>
-              <div id="carrito" class="carritoDesplegable">
-                <div id="totalCompra" class="estilosCarrito">Total: 0</div>
-              </div>
+              <img src="./imagenes/logoCarrito.svg" class="logoCarrito" alt="Logo carrito"/>
             </div>
           </div>
         </h1>
   </section>
-  <!------------------------------------Acá comienza el NAV DE BOOTSTRAP ----------------------------------->
-        <section class="containerDos ">
-          <nav class="navbar navbar-expand-custom navbar-light navBar">            
-            <div class="container-fluid">
-              <div class="marcaMobile"> 
-                <a href="./index.html">S O P H I E S</a>
-                <div class="pottery">
-                  <a href="./index.html">Pottery </a>
-                </div>  
-                </div>
-                <div class="crearCuenta">
-                  <div class="logosBucadorCarrito">
-                    <img src="./imagenes/logoBuscador.svg" alt="Logo buscador"/>
-                    <img src="./imagenes/logoCarrito.svg"  alt="Logo carrito"/>
-                    <img src="./imagenes/user.svg"  alt="Logo usuario"/>
-                  </div>
-                </div>
-              <button class="navbar-toggler flex-order-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>              
-            </div>
-            <div class="collapse navbar-collapse navBarContainer" id="navbarTogglerDemo02">
-              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                <li class="nav-item ">
-                  <a class="nav-link active" aria-current="page" href="#">
-                    <a class="navLink" href="./index.html">Inicio</a>
-                  </a>
-                </li>
-                <li class="nav-item">
-                    <li>
-                      <a class="navLink" href="./Tienda.html">Tienda</a>
-                    <ul>
-                      <li><a href="./tazasYplatos.html" >Tazas y Platos</a></li>
-                      <li><a href="./bowlsYmates.html" >Bowls y Mates</a></li>
-                      <li><a href="./macetasYfloreros.html" >Macetas y Floreros</a></li>
-                    </ul>
-                </li>
-                </li>
-                <li class="nav-item">
-                    <a class="navLink" href="./Preg.Frecuentes.html">Preg. Frecuentes</a>
-                </li>
-                <li class="nav-item">
-                    <a class="navLink" href="./Nosotras.html">Nosotras</a>
-                </li>
-                <li class="nav-item">
-                    <a class="navLink" href="./Contacto.html">Contacto</a>
-                </li>
-              </ul>
-            </div>
-          </nav>
-        </section>
-  </header>
+ <!------------------------------------Acá comienza el NAV DE BOOTSTRAP ----------------------------------->
+ <section class="containerDos ">
+  <nav class="navbar navbar-expand-custom navbar-light navBar">            
+    <div class="container-fluid">
+      <div class="marcaMobile"> 
+        <a href="./index.html">S O P H I E S</a>
+        <div class="pottery">
+          <a href="./index.html">Pottery </a>
+        </div>  
+        </div>
+        <div class="crearCuenta">
+          <div class="logosBucadorCarrito">
+            <img src="./imagenes/logoBuscador.svg" alt="Logo buscador"/>
+            <img src="./imagenes/logoCarrito.svg"  alt="Logo carrito" class="logoCarrito"/>
+            <img src="./imagenes/user.svg"  alt="Logo usuario"/>
+          </div>
+        </div>
+      <button class="navbar-toggler flex-order-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>              
+    </div>
+    <div class="collapse navbar-collapse navBarContainer" id="navbarTogglerDemo02">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item ">
+          <a class="nav-link active" aria-current="page" href="#">
+            <a class="navLink" href="./index.html">Inicio</a>
+          </a>
+        </li>
+        <li class="nav-item">
+            <li>
+              <a class="navLink" href="./Tienda.html">Tienda</a>
+            <ul>
+              <li><a href="./tazasYplatos.html" >Tazas y Platos</a></li>
+              <li><a href="./bowlsYmates.html" >Bowls y Mates</a></li>
+              <li><a href="./macetasYfloreros.html" >Macetas y Floreros</a></li>
+            </ul>
+        </li>
+        </li>
+        <li class="nav-item">
+            <a class="navLink" href="./Preg.Frecuentes.html">Preg. Frecuentes</a>
+        </li>
+        <li class="nav-item">
+            <a class="navLink" href="./Nosotras.html">Nosotras</a>
+        </li>
+        <li class="nav-item">
+            <a class="navLink" href="./Contacto.html">Contacto</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</section>
+<div id="carrito" class="carritoDesplegable">
+  <div id="totalCompra" class="estilosCarrito">Total: 0</div>
+</div>
+</header>
   <!------------------------------------------Acá comienza el MAIN y el Carousel----------------------------------------->
   <main>
     <section class="container">

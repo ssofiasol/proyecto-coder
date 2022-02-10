@@ -32,7 +32,6 @@
     <script src="./js/clases.js/carrito.js"> </script>
     <script src="./js/clases.js/itemCarrito.js"> </script>
     <script src="./js/clases.js/producto.js"> </script>
-    <script src="./js/carritoInicial/json.js"> </script>
     <script src="./js/climaConAjax.js"> </script>    
     <title>SOPHIES Pottery❣ - Macetas y floreros</title>
   </head>
@@ -61,14 +60,11 @@
               </ul>
             </nav> 
           </div> 
-           <div class="crearCuenta">
+          <div class="crearCuenta">
             <div class="iniciarSesión">CREAR CUENTA - INICIAR SESIÓN</div>
             <div class="logosBucadorCarrito">
               <img src="./imagenes/logoBuscador.svg" alt="Logo buscador"/>
-              <img id="logoCarrito" src="./imagenes/logoCarrito.svg"  alt="Logo carrito"/>
-              <div id="carrito" class="carritoDesplegable">
-                <div id="totalCompra" class="estilosCarrito">Total: 0</div>
-              </div>
+              <img src="./imagenes/logoCarrito.svg" class="logoCarrito" alt="Logo carrito"/>
             </div>
           </div>
         </h1>
@@ -86,7 +82,7 @@
         <div class="crearCuenta">
           <div class="logosBucadorCarrito">
             <img src="./imagenes/logoBuscador.svg" alt="Logo buscador"/>
-            <img src="./imagenes/logoCarrito.svg"  alt="Logo carrito"/>
+            <img src="./imagenes/logoCarrito.svg"  alt="Logo carrito" class="logoCarrito"/>
             <img src="./imagenes/user.svg"  alt="Logo usuario"/>
           </div>
         </div>
@@ -124,6 +120,9 @@
     </div>
   </nav>
 </section>
+<div id="carrito" class="carritoDesplegable">
+  <div id="totalCompra" class="estilosCarrito">Total: 0</div>
+</div>
 </header>
     <!------------------------------------------Acá comienza el MAIN ----------------------------------------->
     <main>
@@ -138,8 +137,8 @@
               alt="Maceta con textura"
             />
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Maceta con textura</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Maceta croco</h5>
+              <p class="card-text descripYbotonesImg">$1300</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -155,8 +154,8 @@
               alt="Maceta con puntos"
             />
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Maceta con puntos</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Maceta Agnes</h5>
+              <p class="card-text descripYbotonesImg">$1100</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -171,8 +170,8 @@
               class="card-img-top"
               alt="Maceta maquillada"/>
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Maceta Maquillada</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Maceta Rubí</h5>
+              <p class="card-text descripYbotonesImg">$1240</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -187,8 +186,8 @@
               class="card-img-top"
               alt="Maceta con plato"/>
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Maceta con Plato</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Super maceta</h5>
+              <p class="card-text descripYbotonesImg">$1000</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -203,8 +202,8 @@
               class="card-img-top"
               alt="Florero gris"/>
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Florero gris</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Florero salpic</h5>
+              <p class="card-text descripYbotonesImg">$750</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -219,8 +218,8 @@
               class="card-img-top"
               alt="Florero gris y blanco con oro"/>
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Florero dos Colores</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Florero duo</h5>
+              <p class="card-text descripYbotonesImg">$850</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -235,8 +234,8 @@
               class="card-img-top"
               alt="Florero texturizado"/>
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Florero Texturizado</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Florero Amira</h5>
+              <p class="card-text descripYbotonesImg">$900</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
@@ -251,8 +250,8 @@
               class="card-img-top"
               alt="Florero blanco"/>
             <div class="card-body">
-              <h5 class="card-title descripYbotonesImg">Florero Blanco</h5>
-              <p class="card-text descripYbotonesImg">$670</p>
+              <h5 class="card-title descripYbotonesImg">Florero blanco</h5>
+              <p class="card-text descripYbotonesImg">$700</p>
               <div class="descripYbotonesImg">
                 <button class="btn btn-danger m-1">Comprar</button>
                 <button class="btn btn-secondary m-1 botonDos">Detalles</button>
